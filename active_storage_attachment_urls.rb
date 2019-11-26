@@ -9,6 +9,7 @@ end
 
 # The above assumes you have a single attachment in your model like this: has_one_attached :avatar (change attachment name accordingly).
 # Put this method in the model which has the attachment.
+# Usage (in controller): render json: @user, methods: :avatar_url, status: :ok
 
 # Get multiple attachment URLs
 def photos
@@ -21,3 +22,4 @@ end
 
 # The above assumes you have multiple attachments in your model like this: has_many_attached :images (change attachment name accordingly).
 # Put this method in the model which has the attachments.
+# Usage (in controller): render json: @business, methods: :photos, status: :ok
